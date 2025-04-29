@@ -1,0 +1,23 @@
+enum Estado {
+  SUSCETIVEL, INFECTADO, RECUPERADO
+}
+
+class Individuo {
+  int id;                // Identificador único do indivíduo
+  Estado estado;         // Estado atual do indivíduo
+  int tempoReacao;       // Frequência das ações (movimentação/infectar)
+  int tempoInfectado;    // Quanto tempo já está infectado
+  int tempoParaRecuperar;  // Tempo que precisa para ficar recuperado
+  int quantosInfectou;   // Quantidade de indivíduos infectados por ele
+
+  Individuo(int id, Estado estadoInicial) {
+  this.id = id;
+  this.estado = estadoInicial;
+  this.tempoReacao = int(random(30, 120));
+  this.tempoInfectado = 0;
+  this.tempoParaRecuperar = int(random(300, 600));
+  this.quantosInfectou = 0;
+  }
+}
+
+  
